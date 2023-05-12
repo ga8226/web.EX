@@ -39,26 +39,41 @@ a{
     margin: 0 auto;
 }
 
-
-#gnb >li> a{
- font-size: 22px;
+.h100{
+    height:100px ;
 }
-#gnb >li:nth-child(4)> a{
-    color: red;
-   }
+.h300{
+    height:300px ;
+}
+.h200{
+    height:200px ;
+}
+.d1a{
+    font-size: 22px; padding: 0 15px; 
+}
 
-#gnb ul{
-    height: 0;
-    border: 1px solid black; 
-    transition: 0.5s;
+.d1a:hover{
+    background-color: rgb(26, 96, 161); color: white; }
+
+ 
+.d2ul{
+    background-color: white;
+    height:0;
     overflow: hidden;
+    transition: 0.5s;
+    left:0; width:100%;
+}
+.d2ul li{
+    line-height: 35px; 
+    text-align: center;
+}
+.d1li:hover .d2ul{
+    height: calc( 35px * 3); 
+}
+.d2ul li a:hover{
+    
+    background-color: rgb(88, 139, 216); color: white;
+    display: block;
 }
 
-/* #gnb:hover ul{
-display: block;
-} */
-
-#gnb li:hover ul{
-    height: 100px;
-}
-
+   
