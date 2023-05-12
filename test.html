@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abs{position: absolute;}
+        .bg-yellow{
+            background-color: yellow;
+        }
+        .round50{
+            border-radius: 50%;
+        }
+        .mother{
+            width:50vh; height: 50vh;
+            left: 50%; top: 50%;
+            margin-left: -25vh;
+            margin-top: -25vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           }
+
+            .leftchild,.rightchild{
+                width: 50%;
+                height: 50%;
+                top: 50%;
+                margin-top:-25%;
+                background-color: transparent;
+                transition: 0.5s;
+            }
+            .leftchild{
+                left: 0;
+                /* margin-left: 100%; */
+                /* transform: translateX(-100%); */
+
+            }
+            .rightchild{
+                right: 0;
+                /* margin-right: -100%; */
+                /* transform: translateX(100%); */
+
+            }
+            .mother:hover .leftchild{
+                transform:translateX(-100%);
+                background-color: yellow;
+            }
+            .mother:hover .rightchild{
+                transform:translateX(100%);
+                background-color: yellow;
+            }
+            .mother:after{content: "ncs";  color: black; display: block; font-size: 5vw;}
+
+    </style>
+</head>
+<body>
+    <div class="mother bg-yellow round50 abs">
+        <div class="leftchild bg-yellow round50 abs"></div>
+        <div class="rightchild bg-yellow round50 abs"></div>
+    </div>    
+</body>
+</html>
